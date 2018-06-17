@@ -1,0 +1,18 @@
+@for $i from 1 through 6 {
+  h#{$i} {  	
+    margin: 0;    
+    font-family: $heading-font-family;  
+    font-weight: normal;
+
+    // font-size: calc(#{map-get($map-heading-size, h#{$i})} * #{$scale-heading-for-xsmall}); 
+    // @include breakpoint(small) {
+    // 	font-size: calc(#{map-get($map-heading-size, h#{$i})} * #{$scale-heading-for-small});
+    // }
+    // @include breakpoint(medium) {
+    //   font-size: calc(#{map-get($map-heading-size, h#{$i})} * #{$scale-heading-for-medium});
+    // }
+    // @include breakpoint(large) {
+    // 	font-size: map-get($map-heading-size, h#{$i});
+    // }    
+  }
+}

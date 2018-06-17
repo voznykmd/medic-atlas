@@ -1,0 +1,130 @@
+.header-wrapper{
+	position: relative;	
+	width: 100%;
+	&:after{
+		content:'';
+		position: absolute;
+		bottom: 20px;
+		height: 1px;
+		width: 100%;
+		background-color: rgba(51, 51, 51, 0.15);
+	}
+}
+.header{
+	padding: 20px 30px 40px;
+	display: flex;	
+	flex-wrap: wrap;	
+	justify-content: center;	
+	@include breakpoint(medium){
+		flex-wrap: nowrap;
+		justify-content: space-between;	
+	}	
+	.logo-container{		
+		width: 200px;
+    height: 100px;
+	}
+	.logo{
+		width: 100%;		
+		height: 100%;
+  	object-fit: contain;
+	}
+	.header-info{
+		display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;  	
+	}
+	.social{
+		display: flex;
+		flex-wrap: wrap;    	
+    	align-items: center;
+    	justify-content: center;
+    	@include breakpoint(medium){
+    		justify-content: flex-end;
+    	}
+	}
+	.mailto{
+		display: inline-block;		
+		white-space: nowrap;		
+	}
+	.phone-container{
+		display: flex;
+		align-items: center;
+		margin-left: 20px;		
+	}
+	.phone{
+		display: inline-block;				
+		white-space: nowrap;
+	}
+	.facebook-link{
+		margin-left: 20px;
+	}
+	.facebook{
+		height: 20px;				
+	}
+	.instagram-link{
+		margin-left: 20px;
+	}
+	.instagram{
+		height: 20px;		
+	}
+	.nav-list{
+		margin: 0 20px;
+    	padding: 0;
+    	list-style: none;
+    	display: flex;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	@include breakpoint(medium){
+    		justify-content: flex-end;
+    	}
+	}	
+
+	.list-item{
+		position: relative;
+		z-index: 10;
+		padding: 0 5px;
+		&:not(:last-child){
+			//margin-right: 10px;
+		}		
+	}
+	.item-link{
+		&.active{
+		    color: $active-color;
+		}
+		&:hover{
+			color: $active-color;
+		}	
+		display: block;	
+		cursor: pointer;
+	}
+	.nuv-sublist{
+		display: none;
+		list-style: none;				
+		min-width: 100%;
+		padding: 20px 5px 10px;
+		background-color: $white;
+		position: absolute;		
+		top: 100%;
+		left: 0;
+	}	
+	.sublist-item{
+		display: block;
+		&:not(:last-child){
+			margin-bottom: 10px;
+		}
+	}
+	.subitem-link{
+		white-space: nowrap;
+		display: block;
+		&.active{
+		    color: $active-color;
+		}
+		&:hover{
+			color: $active-color;
+		}	
+	}
+
+	.list-item:hover > .nuv-sublist {
+    	display: block;
+	}
+}

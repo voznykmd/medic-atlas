@@ -1,0 +1,44 @@
+.video-wrapper{
+	background-color: $background-blue;
+}
+.agency{
+	padding: 80px 0 120px;
+	color: $white;
+	text-align: center;
+	.agency-top{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 80px;
+		padding: 0 5%;
+		line-height: 1.5;
+		@include breakpoint(medium){
+			flex-wrap: nowrap;
+		}
+	}
+	.agency-bottom{
+		padding: 0 15%;
+	}	    	
+	.agency-title-container{
+		flex: 1 0 100%;
+		padding: 0 5%;
+		margin-bottom: 40px;
+		@include breakpoint(medium){
+			flex: 1 0 50%;
+			margin-bottom: 0;
+		}	
+	}	
+	.agency-video-container{
+		flex: 1 0 100%;
+		@include breakpoint(medium){
+			flex: 1 0 50%;
+		}		
+	}	
+	.title{
+		font-size: 24px;
+		margin-bottom: 50px;
+	}
+	.title-price{
+		font-size: 44px;
+	}
+}

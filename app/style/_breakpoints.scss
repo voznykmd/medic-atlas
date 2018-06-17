@@ -1,0 +1,63 @@
+/*=========================================================
+///////////////////////////////////////////////////////////
+  BREAKPOINTS
+///////////////////////////////////////////////////////////
+=========================================================*/
+$xsmall: 1px;   //or 320px
+$small: 600px;
+$medium: 768px;
+$large: 1300px;
+$xlarge: 1920px;
+/*=========================================================
+///////////////////////////////////////////////////////////
+  MOBILE -- FIRST
+///////////////////////////////////////////////////////////
+=========================================================*/
+   
+  /* 320 і above --> xsmall*/
+  /* 600 і above --> small*/
+  /* 900 і above --> medium*/
+  /* 1200 і above --> large*/
+  /* 1920 і above --> xlarge*/
+/*================================================
+!!!!!!!!!!Syntax of myxin!!!!!!!!!!!!!!!
+  @include breakpoint(small) {
+    color: red;
+  }
+*/
+/*=======================================================================
+/////////////////////////////////////////////////////////////////////////
+                            ONLY
+  xsmall-only small-only medium-only large-only xlarge-only 
+/////////////////////////////////////////////////////////////////////////
+=======================================================================*/
+  
+  /* 320 - 600 --> xsmall-only*/
+  /* 600 - 900 --> small-only*/
+  /* 900 - 1200 --> medium-only*/
+  /* 1200 - 1920 --> large-only*/
+  /* 1920 і above --> xlarge-only*/
+/*================================================
+!!!!!!!!!!Syntax of myxin!!!!!!!!!!!!!!!
+  @include breakpoint(small-only) {
+    padding: 20px;
+  }
+*/
+@mixin breakpoint($range) {
+/*======================+MOBILE-FIRST+==========================================*/
+  @if $range == xsmall {@media (min-width: ($xsmall)) { @content; }}
+  @else if $range == small {@media (min-width: $small) { @content; }}
+  @else if $range == medium {@media (min-width: $medium) { @content; }}
+  @else if $range == large {@media (min-width: $large) { @content; }}
+  @else if $range == xlarge {@media (min-width: $xlarge) { @content; }}   
+/*=======================+ONLY+==================================================*/
+  @else if $range == xsmall-only {@media screen and (min-width: $xsmall) and (max-width: ($small - 1)) { @content; }}
+  @else if $range == small-only {@media screen and (min-width: $small) and (max-width: ($medium - 1)) { @content; }}
+  @else if $range == medium-only {@media screen and (min-width: $medium) and (max-width: ($large - 1)) { @content; }}
+  @else if $range == large-only {@media screen and (min-width: $large) and (max-width: ($xlarge - 1)) { @content; }}
+  @else if $range == xlarge-only {@media screen and (min-width: $xlarge) { @content; }}    
+}
+
+
+
+

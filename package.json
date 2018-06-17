@@ -1,0 +1,42 @@
+{
+  "name": "medic-atlas",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voznykmd/medic-atlas.git"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "autoprefixer": "^8.4.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.18.12",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-watch": "^4.3.11",
+    "postcss-short": "^4.1.0",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1",
+    "parallax-js": "^3.1.0",
+    "scroll-parallax": "^2.1.0"
+  }
+}

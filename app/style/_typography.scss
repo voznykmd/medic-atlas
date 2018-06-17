@@ -1,0 +1,133 @@
+/*=========================================================
+  01. #GLOBAL
+=========================================================*/
+body{
+  font-size: $global-font-size;   
+  font-family: $global-font-family; 
+  color: $text-color;   
+}
+
+p{
+  margin: 0 0 1em;
+  &:last-child{
+    margin: 0;
+  }	
+}
+
+a{	
+  color: $text-color;
+	text-decoration: none;
+  cursor: pointer;  
+}
+
+/*=========================================================
+  02. #PADDING & MARGIN
+=========================================================*/
+// HOW TO USE, helper classe margin, padding
+// pd = padding, mg = margin, -b,-t,-l,r = bottom,top,left,right
+// pd-b-0..8..16..24..32..40..48..56..64..72..80..88..96..104..112..120..128..136..144..152..160..168..176..184
+// pd-t-0..8..16..24..32..40..48..56..64..72..80..88..96..104..112..120..128..136..144..152..160..168..176..184
+// pd-l-0..8..16..24..32..40..48..56..64..72..80
+// pd-r-0..8..16..24..32..40..48..56..64..72..80
+// +
+// mg-b-0..8..16..24..32..40..48..56..64..72..80..88..96..104..112..120..128..136..144..152..160..168..176..184
+// mg-t-0..8..16..24..32..40..48..56..64..72..80..88..96..104..112..120..128..136..144..152..160..168..176..184
+// mg-l-0..8..16..24..32..40..48..56..64..72..80
+// mg-r-0..8..16..24..32..40..48..56..64..72..80
+
+// $right-space-vars:                                                     (0 right r, 8 right r,  16 right r,  24 right r,  32 right r,  40 right r,  48 right r,  56 right r,  64 right r,  72 right r,  80 right r );
+// $bottom-space-vars:                                                    (0 bottom b, 8 bottom b, 16 bottom b, 24 bottom b, 32 bottom b, 40 bottom b, 48 bottom b, 56 bottom b, 64 bottom b, 72 bottom b, 80 bottom b, 88 bottom b, 96 bottom b, 104 bottom b, 112 bottom b, 120 bottom b, 128 bottom b, 136 bottom b, 144 bottom b, 152 bottom b, 160 bottom b, 168 bottom b, 176 bottom b, 184 bottom b);
+// $top-space-vars:                                                       (0 top t, 8 top t,    16 top t,    24 top t,    32 top t,    40 top t,    48 top t,    56 top t,    64 top t,    72 top t,    80 top t   , 88 top t,    96 top t,    104 top t,    112 top t,    120 top t,    128 top t,    136 top t,    144 top t,    152 top t,    160 top t,    168 top t,    176 top t,    184 top t);
+// @mixin generate-margin-classes( $default-space-amounts-with-direction: (0 left l, 8 left l,   16 left l,   24 left l,   32 left l,   40 left l,   48 left l,   56 left l,   64 left l,   72 left l,   80 left l)) {
+//   @each $space in $default-space-amounts-with-direction {
+//     .mg-#{nth($space, 3)}-#{nth($space, 1)} {
+//       margin-#{nth($space, 2)}: #{nth($space, 1)}px;
+//     }
+//   }
+// }
+// @mixin generate-padding-classes( $default-space-amounts-with-direction: (0 left l, 8 left l, 16 left l, 24 left l, 32 left l, 40 left l, 48 left l, 56 left l, 64 left l, 72 left l, 80 left l)) {
+//   @each $space in $default-space-amounts-with-direction {
+//     .pd-#{nth($space, 3)}-#{nth($space, 1)} {
+//       padding-#{nth($space, 2)}: #{nth($space, 1)}px;
+//     }
+//   }
+// }
+// @include generate-margin-classes();
+// @include generate-margin-classes($right-space-vars);
+// @include generate-margin-classes($bottom-space-vars);
+// @include generate-margin-classes($top-space-vars);
+// @include generate-padding-classes();
+// @include generate-padding-classes($right-space-vars);
+// @include generate-padding-classes($bottom-space-vars);
+// @include generate-padding-classes($top-space-vars);
+
+/*=========================================================
+  03. #PADDING & MARGIN   FOR ONLY SMALL SCREEN(0-900) 
+  !!!only works on small screens!!! NOT MOBILE FIRST
+=========================================================*/
+// HOW TO USE, helper classe margin, padding
+// sm-pd = padding, sm-mg = margin, -b,-t,-l,r = bottom,top,left,right
+// sm-pd-b-8..16..24..32..40..48..56..64..72..80..88..96..104..112..120..128..136..144..152..160..168..176..184
+// sm-pd-t-8..16..24..32..40..48..56..64..72..80..88..96..104..112..120..128..136..144..152..160..168..176..184
+// sm-pd-l-8..16..24..32..40..48..56..64..72..80..88
+// sm-pd-r-8..16..24..32..40..48..56..64..72..80..88
+// +
+// sm-mg-b-8..16..24..32..40..48..56..64..72..80..88..96..104..112..120..128..136..144..152..160..168..176..184
+// sm-mg-t-8..16..24..32..40..48..56..64..72..80..88..96..104..112..120..128..136..144..152..160..168..176..184
+// sm-mg-l-8..16..24..32..40..48..56..64..72..80..88
+// sm-mg-r-8..16..24..32..40..48..56..64..72..80..88
+
+// @media only screen and (max-width: $large - 1) {
+//   $smright-space-vars:                                                     (0 right r, 8 right r,  16 right r,  24 right r,  32 right r,  40 right r,  48 right r,  56 right r,  64 right r,  72 right r,  80 right r );
+//   $smbottom-space-vars:                                                    (0 bottom b, 8 bottom b, 16 bottom b, 24 bottom b, 32 bottom b, 40 bottom b, 48 bottom b, 56 bottom b, 64 bottom b, 72 bottom b, 80 bottom b, 88 bottom b, 96 bottom b, 104 bottom b, 112 bottom b, 120 bottom b, 128 bottom b, 136 bottom b, 144 bottom b, 152 bottom b, 160 bottom b, 168 bottom b, 176 bottom b, 184 bottom b);
+//   $smtop-space-vars:                                                       (0 top t, 8 top t,    16 top t,    24 top t,    32 top t,    40 top t,    48 top t,    56 top t,    64 top t,    72 top t,    80 top t   , 88 top t,    96 top t,    104 top t,    112 top t,    120 top t,    128 top t,    136 top t,    144 top t,    152 top t,    160 top t,    168 top t,    176 top t,    184 top t);
+//   @mixin generate-smmargin-classes( $smdefault-space-amounts-with-direction: (0 left l, 8 left l,   16 left l,   24 left l,   32 left l,   40 left l,   48 left l,   56 left l,   64 left l,   72 left l,   80 left l)) {
+//     @each $smspace in $smdefault-space-amounts-with-direction {
+//       .sm-mg-#{nth($smspace, 3)}-#{nth($smspace, 1)} {
+//         margin-#{nth($smspace, 2)}: #{nth($smspace, 1)}px;
+//       }
+//     }
+//   }
+//   @mixin generate-smpadding-classes( $smdefault-space-amounts-with-direction: (0 left l, 8 left l, 16 left l, 24 left l, 32 left l, 40 left l, 48 left l, 56 left l, 64 left l, 72 left l, 80 left l)) {
+//     @each $smspace in $smdefault-space-amounts-with-direction {
+//       .sm-pd-#{nth($smspace, 3)}-#{nth($smspace, 1)} {
+//         padding-#{nth($smspace, 2)}: #{nth($smspace, 1)}px;
+//       }
+//     }
+//   }
+//   @include generate-smmargin-classes();
+//   @include generate-smmargin-classes($smright-space-vars);
+//   @include generate-smmargin-classes($smbottom-space-vars);
+//   @include generate-smmargin-classes($smtop-space-vars);
+//   @include generate-smpadding-classes();
+//   @include generate-smpadding-classes($smright-space-vars);
+//   @include generate-smpadding-classes($smbottom-space-vars);
+//   @include generate-smpadding-classes($smtop-space-vars);
+// }
+
+/*=========================================================
+  04. #PADDING & MARGIN OFF
+=========================================================*/
+// .pd-x-off{
+//   padding-left: 0!important;
+//   padding-right: 0!important;
+// }
+// .pd-y-off{
+//   padding-top: 0!important;
+//   padding-bottom: 0!important;
+// }
+// .mg-x-off{
+//   margin-left: 0!important;
+//   margin-right: 0!important;
+// }
+// .mg-y-off{
+//   margin-top: 0!important;
+//   margin-bottom: 0!important;
+// }
+
+/*=========================================================
+  05. #COLOR TEXT
+=========================================================*/
+// .text-white{
+//   color: $white;
+// }

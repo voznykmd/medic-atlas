@@ -1,0 +1,48 @@
+///////////////////////////////////////////////////////////////////
+/*========================================================
+Global Styles
+========================================================*/
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
+@import "fonts";
+@import "variables";
+@import "breakpoints";
+@import "heading";
+@import "helpers";
+@import "button";
+@import "wrapper";
+@import "typography";
+//////////////////////////////////////////////////////////////////
+
+
+html {
+  box-sizing: border-box; 
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/*=========================================================
+///////////////////////////////////////////////////////////
+  Including COMPONENTS
+///////////////////////////////////////////////////////////
+=========================================================*/
+
+@import "components/header";
+@import "components/footer";
+
+/*=========================================================
+///////////////////////////////////////////////////////////
+  Including PARTS
+///////////////////////////////////////////////////////////
+=========================================================*/
+
+
+@import "parts/overlay1";
+@import "parts/about";
+@import "parts/services";
+@import "parts/video";
+@import "parts/check";
+@import "parts/graphic";

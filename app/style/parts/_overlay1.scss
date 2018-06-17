@@ -1,0 +1,15 @@
+.overlay1{
+
+	// min-height: 525px;
+	// background: url(./img/city-panoram.jpg) no-repeat top center;
+	// background-size: cover;
+
+  .overlay1-img{
+    display: block;
+    width: 100%;
+    height: 100%;    
+    min-height: 525px;
+    object-fit: cover;  
+    object-position: center center;
+  }
+}

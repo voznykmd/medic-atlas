@@ -1,0 +1,139 @@
+/*=========================================================
+  01. #TEXT
+=========================================================*/
+// .text-uppercase{
+//   text-transform: uppercase;
+// }
+// .text-underline{
+//   text-decoration: underline;
+// }
+// .text-center{
+//   text-align: center;
+// }
+// .text-left{
+//   text-align: left;
+// }
+// .text-right{
+//   text-align: right;
+// }
+/*=========================================================
+  02. #HIDE & SHOW
+
+=========================================================*/
+//Only
+
+// .hide-for-xsmall-only{
+//   @include breakpoint(xsmall-only){
+//     display: none!important;
+//   }
+// }
+// .show-for-xsmall-only{  
+//   @media (min-width: ($small)){
+//     display: none!important;
+//   }  
+// }
+// .hide-for-small-only{
+//   @include breakpoint(small-only){
+//     display: none!important;
+//   }
+// }
+// .show-for-small-only{
+//   @media (max-width: ($small - 1)), (min-width: ($medium)){
+//     display: none!important;
+//   }
+// }
+// .hide-for-medium-only{
+//   @include breakpoint(medium-only){
+//     display: none!important;
+//   }
+// }
+// .show-for-medium-only{
+//   @media (max-width: ($medium - 1)), (min-width: ($large)){
+//     display: none!important;
+//   }  
+// }
+// .hide-for-large-only{
+//   @include breakpoint(large-only){
+//     display: none!important;
+//   }
+// }
+// .show-for-large-only{
+//   @media (max-width: ($large - 1)), (min-width: ($xlarge)){
+//     display: none!important;  
+//   }
+// }
+// .hide-for-xlarge-only{
+//   @include breakpoint(xlarge-only){
+//     display: none!important;
+//   }
+// }
+// .show-for-xlarge-only{
+//   @media (max-width: ($xlarge - 1)){
+//     display: none!important;  
+//   }
+// }
+
+//mobile-first
+
+// .hide{
+//   @include breakpoint(xsmall){
+//     display: none!important;
+//   }
+// }
+
+// .hide-for-small{
+//   @include breakpoint(small){
+//     display: none!important;
+//   }
+// }
+// .show-for-small{
+//   @media (max-width: ($small - 1)){
+//     display: none!important;  
+//   }
+// }
+// .hide-for-medium{
+//   @include breakpoint(medium){
+//     display: none!important;
+//   }
+// }
+// .show-for-medium{
+//   @media (max-width: ($medium - 1)){
+//     display: none!important; 
+//   }
+// }
+// .hide-for-large{
+//   @include breakpoint(large){
+//     display: none!important;
+//   }
+// }
+// .show-for-large{
+//   @media (max-width: ($large - 1)){
+//     display: none!important;  
+//   }
+// }
+// .hide-for-xlarge{
+//   @include breakpoint(xlarge){
+//     display: none!important;
+//   }
+// }
+// .show-for-xlarge{
+//   @media (max-width: ($xlarge - 1)){
+//     display: none!important;  
+//   }
+// }
+
+/*=========================================================
+  03. #POSITION
+=========================================================*/
+// .z-index10{
+//   z-index: 10;    
+// }
+// .posf{
+//   position: fixed;  
+// }
+// .posr{
+//   position: relative;
+// }
+// .posa{
+//   position: absolute;
+// }

@@ -1,0 +1,146 @@
+.graphic-wrapper{
+	background-color: #5fb0ee; 
+}
+.graphic{	
+	padding: 100px 40px;
+	.graphic-title{
+		font-size: 48px;
+	    color: #fff;
+	    text-align: center;
+	    margin-bottom: 100px;
+	    text-transform: capitalize;	
+	    overflow: hidden;    
+	}
+	.title-text{
+		position: relative;
+		display: inline-block;
+		padding-bottom: 20px;
+		&:after{
+	    	content: '';
+	    	position: absolute;
+	    	bottom: 0;
+	    	left: 50%;
+	    	transform: translateX(-50%);
+	    	height: 5px;
+	    	width: 120%;
+	    	background-color: #fff;
+	    }
+	}
+	.subtitle{
+		font-size: 40px;
+	    color: #fff;
+	    text-align: center;
+	    margin-bottom: 40px;
+	    &second{
+	    	text-transform: capitalize;
+	    }	    
+	}
+
+	.panels{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include breakpoint(medium){
+			justify-content: space-evenly;
+		}
+		@include breakpoint(large){
+			justify-content: space-between;
+		}
+		//justify-content: space-around;
+		//justify-content: space-evenly;
+	}
+	.panel-item{
+		display: block;
+		margin-bottom: 50px;
+		flex: 0 1 100%;
+		@include breakpoint(medium){
+			flex: 0 1 40%;
+		}		
+		@include breakpoint(large){
+			flex: 0 1 28%;
+		}
+	}
+	.raised{
+		position:relative;
+	    width:40%;
+	    padding:1em;
+	    margin:2em 10px 4em;
+	    background-color: rgba(225,225,225,0.5);	    
+	    transition: background-color 600ms ease-in-out;	    
+	    &:hover{
+	    	background-color: rgba(50,50,50,0.5);		
+			}	
+	    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	       -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	            &:before, &:after{
+	            	content:"";
+				    position:absolute;
+				    z-index:-2;
+	            }
+	}	
+	.item-container{
+		overflow: hidden;
+		position: relative;
+	}
+	.adapt-container{
+		position: relative;
+  	overflow: hidden;
+  	padding-bottom: 100%;   	
+  	transition: transform 600ms ease-in-out;  	  	 	
+	}	
+	.panel-item:hover{
+		.adapt-container{
+			transform: translateY(-100%);	
+		}
+	}
+	.panel-image{
+		position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+	}
+	.item-text{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		// width: 100%;
+		// height: 100%;
+
+		padding: 0 10px;
+		font-size: 24px;
+    line-height: 1.2;
+    color: #fff;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: translateY(100%);
+		transition: transform 600ms ease-in-out;		
+	}
+	.panel-item:hover{
+		.item-text{
+			transform: translateY(0%);	
+		}
+	}
+	.panel-name{
+		padding: 20px 10px 0;				
+		@include breakpoint(large){
+			padding: 30px 10px 0;
+		}	
+		font-size: 32px;
+		line-height: 1.5;
+	    color: #fff;	    
+	    text-transform: capitalize;
+	    text-align: center;
+	    @include breakpoint(medium){
+			text-align: left;
+		}
+	}
+}
