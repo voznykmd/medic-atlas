@@ -7,14 +7,10 @@
     	z-index: 10;
       padding: 80px 40px 120px; 
     } 
-    .parallax_scene1{
+    .parallax_scene0, .parallax_scene1, .parallax_scene2{
     	position: absolute;
     	z-index: -5;
-    }
-    .parallax_scene2{
-      position: absolute;
-      z-index: -5;
-    }
+    }    
 	
 	.services-main-title{
 		font-size: 48px;

@@ -1,0 +1,13 @@
+.analiz-wrapper{
+  background-color: $background-blue;
+}
+.analiz{
+	overflow: auto;
+  padding: 80px 0 120px;  
+  .analiz-title{
+    font-size: 48px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
