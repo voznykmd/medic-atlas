@@ -110,7 +110,7 @@
 						<h3 class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 						<h3 class="subtitle second">Lorem ipsum dolor.</h3>
 						<div class="panels">
-							<a class="panel-item raised" href="#" target="_blank">
+							<a class="panel-item raised" href="#modal-1" data-modal-open>
 								<div class="item-container">
 									<div class="adapt-container" style="padding-bottom: 80%"> 
 										<img class="panel-image" src="./img/picture-touch-up.svg" alt="Logos">		
@@ -119,7 +119,7 @@
 								</div>
 								<h3 class="panel-name">Lviv</h3>										
 							</a>	
-							<a class="panel-item raised" href="#" target="_blank">
+							<a class="panel-item raised" href="#modal-1" data-modal-open>
 								<div class="item-container">
 									<div class="adapt-container" style="padding-bottom: 80%">
 										<img class="panel-image" src="./img/social-media-icons.svg" alt="Busines cards">
@@ -128,7 +128,7 @@
 								</div>
 								<h3 class="panel-name">Lviv</h3>								
 							</a>	
-							<a class="panel-item raised" href="#" target="_blank">
+							<a class="panel-item raised" href="#modal-1" data-modal-open>
 								<div class="item-container">
 									<div class="adapt-container" style="padding-bottom: 80%">
 										<img class="panel-image" src="./img/infographics.svg" alt="Open house flyers">
@@ -137,7 +137,7 @@
 								</div>
 								<h3 class="panel-name">Lviv</h3>									
 							</a>
-							<a class="panel-item raised" href="#" target="_blank">
+							<a class="panel-item raised" href="#modal-1" data-modal-open>
 								<div class="item-container">
 									<div class="adapt-container" style="padding-bottom: 80%">
 										<img class="panel-image" src="./img/business-cards.svg" alt="Listing presentations">
@@ -146,7 +146,7 @@
 								</div>							
 								<h3 class="panel-name">Lviv</h3>								
 							</a>	
-							<a class="panel-item raised" href="#" target="_blank">
+							<a class="panel-item raised" href="#modal-1" data-modal-open>
 								<div class="item-container">
 									<div class="adapt-container" style="padding-bottom: 80%">
 										<img class="panel-image" src="./img/picture-touch-up.svg" alt="Just listed Just sold">
@@ -155,7 +155,7 @@
 								</div>
 								<h3 class="panel-name">Poltava</h3>								
 							</a>	
-							<a class="panel-item raised" href="#" target="_blank">
+							<a class="panel-item raised" href="#modal-1" data-modal-open>
 								<div class="item-container">
 									<div class="adapt-container" style="padding-bottom: 80%">
 										<img class="panel-image" src="./img/social-media-icons.svg" alt="picture touch up">
@@ -164,7 +164,7 @@
 								</div>
 								<h3 class="panel-name">Poltava</h3>								
 							</a>	
-							<a class="panel-item raised" href="#" target="_blank">
+							<a class="panel-item raised" href="#modal-1" data-modal-open>
 								<div class="item-container">
 									<div class="adapt-container" style="padding-bottom: 80%">
 										<img class="panel-image" src="./img/infographics.svg" alt="Infographics">
@@ -173,7 +173,7 @@
 								</div>
 								<h3 class="panel-name">Poltava</h3>								
 							</a>	
-							<a class="panel-item raised" href="#" target="_blank">
+							<a class="panel-item raised" href="#modal-1" data-modal-open>
 								<div class="item-container">
 									<div class="adapt-container" style="padding-bottom: 80%">
 										<img class="panel-image" src="./img/business-cards.svg" alt="Mailers">
@@ -238,6 +238,23 @@
 				</div>
 			</section>
 
+			
+			<div id="modal-1" style="display:none">
+				<iframe src="http://dane-i-analizy.pl/raport/1830-lviv-eng/zobacz/atlas.html" frameborder="0" style="border:none; overflow:hidden; width:850px; min-width: 100%; height:800px;" allowTransparency="true"> </iframe>
+			</div>
+			<div id="modal-2" style="display:none">
+				<img class="img" src="http://i.imgur.com/AzKAV.jpg" alt="Just Can't Reach.">
+			</div>
+
+			<div class="modal">
+			  <div class="modal-inner">
+			    <a class="close-modal" data-modal-close>			    	
+			    	<div class="close-icon"></div>			    	
+			    </a>			    
+			    <div class="modal-content"></div>			    		    
+			  </div>
+			</div>
+
 		</main>
 
 		<footer class="footer-wrapper">
@@ -254,7 +271,12 @@
 			</div>
 		</footer>
 
-		<script src="./js/libs/Parallax.min.js"></script>
+		<script src="./libs/Parallax.min.js"></script>
+
+		<script src="./libs/vanilla-modal.js"></script>	
+		<script>var vanillaModal = new VanillaModal.default()</script>		
+
+
 		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>		
 	</body>
 

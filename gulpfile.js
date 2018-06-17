@@ -22,6 +22,7 @@ var path = {
     dist: { 
         css:   'dist/',
         js:    'dist/js/',
+        libs:  'dist/libs/',
         html:  'dist/',
         img:   'dist/img/',
         fonts: 'dist/fonts/'
@@ -29,7 +30,8 @@ var path = {
     src: { 
         sass:  'app/style/style.scss',
         css:   'app/style/**/*.css',
-        js:    'app/js/**/*.js',
+        js:    'app/js/app.js',
+        libs:  'app/libs/**/*.*',
         html:  ['app/**/*.html','!app/template/**/*.html'],
         img:   'app/img/**/*',
         fonts: 'app/fonts/**/*'
@@ -38,6 +40,7 @@ var path = {
         sass:  'app/style/**/*.scss',
         css:   'app/style/**/*.css',
         js:    'app/js/**/*.js',
+        libs:  'app/libs/**/*.*',
         html:  'app/**/*.html',
         img:   'app/img/**/*',
         fonts: 'app/fonts/**/*'
@@ -103,13 +106,17 @@ gulp.task('sass', function(){
 });
 ////////////////////////////////SCORPIO79//////////////////////////////////////
 gulp.task('scripts', function() {
-  return gulp.src(path.src.js)
-    // .pipe(babel({
-    //   presets: ['env']
-    // }))
-    //.pipe(concat('app.min.js'))
-    //.pipe(uglify())
+  return gulp.src(path.src.js)    
+    .pipe(babel({
+        presets: ['env']
+    }))
     .pipe(gulp.dest(path.dist.js))
+    .pipe(reload({stream: true}))
+});
+////////////////////////////////SCORPIO79//////////////////////////////////////
+gulp.task('libs', function() {
+  return gulp.src(path.src.libs) 
+    .pipe(gulp.dest(path.dist.libs))
     .pipe(reload({stream: true}))
 });
 ////////////////////////////////SCORPIO79//////////////////////////////////////
@@ -138,12 +145,13 @@ gulp.task('fontsdist', function() {
     .pipe(reload({stream: true}))
 });
 ////////////////////////////////SCORPIO79//////////////////////////////////////
-gulp.task('build', ['sass', 'htmldist', 'scripts', 'image', 'fontsdist']);
+gulp.task('build', ['sass', 'htmldist', 'scripts', 'libs', 'image', 'fontsdist']);
 ////////////////////////////////SCORPIO79//////////////////////////////////////
 gulp.task('watch', function(){
   gulp.watch(path.watch.sass, ['sass']);
   //gulp.watch(path.watch.сss, ['sass']);
   gulp.watch(path.watch.js, ['scripts']);
+  gulp.watch(path.watch.libs, ['libs']);
   gulp.watch(path.watch.html, ['htmldist']);
   gulp.watch(path.watch.img, ['image']);
   gulp.watch(path.watch.fonts, ['fontsdist']);

@@ -1,3 +1,6 @@
+//import VanillaModal from 'vanilla-modal';
+//import Parallax from 'parallax-js';
+
 var p0 = new Parallax('.parallax_scene0',{
   offsetYBounds: 50,
   intensity: 20,
@@ -18,3 +21,6 @@ var p2 = new Parallax('.parallax_scene2',{
   center: 0.5,
   safeHeight: 0.15
 }).init();
+
+
+// var vanillaModal = new VanillaModal.default();
