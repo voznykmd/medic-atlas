@@ -1,26 +1,38 @@
-//import VanillaModal from 'vanilla-modal';
-//import Parallax from 'parallax-js';
-
-var p0 = new Parallax('.parallax_scene0',{
+const p0 = new Parallax('.parallax_scene0',{
   offsetYBounds: 50,
   intensity: 20,
   center: 0.5,
   safeHeight: 0.15
 }).init();
 
-var p1 = new Parallax('.parallax_scene1',{
+const p1 = new Parallax('.parallax_scene1',{
   offsetYBounds: 50,
   intensity: 50,
   center: 0.5,
   safeHeight: 0.15
 }).init();
 
-var p2 = new Parallax('.parallax_scene2',{
+const p2 = new Parallax('.parallax_scene2',{
   offsetYBounds: 50,
   intensity: 50,
   center: 0.5,
   safeHeight: 0.15
 }).init();
 
-
-// var vanillaModal = new VanillaModal.default();
+const vanillaModal = new VanillaModal.default({
+  modal: '.modal',
+  modalInner: '.modal-inner',
+  modalContent: '.modal-content',
+  open: '[data-modal-open]',
+  close: '[data-modal-close]',
+  page: 'body',
+  loadClass: 'vanilla-modal',
+  class: 'modal-visible',
+  clickOutside: true,
+  closeKeys: [27],
+  transitions: true,
+  onBeforeOpen: null,
+  onBeforeClose: null,
+  onOpen: null,
+  onClose: null
+})
