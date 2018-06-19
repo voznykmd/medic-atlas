@@ -47,3 +47,29 @@ const vanillaModal = new VanillaModal.default({
   onOpen: null,
   onClose: null
 })
+
+//REVEAL
+const rev = new ScrollReveal({
+  reset: false,
+  mobile: true,
+  easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)'
+});
+rev.reveal('.reveal',{
+  viewFactor: 0.3,
+  opacity: 0,  
+  scale: 0.9,              
+  origin: 'bottom',
+  distance: '50px',
+  duration: 1000,
+  delay: 100, 
+});
+
+rev.reveal('.reveal-title',{
+  viewFactor: 0.3,
+  opacity: 0,  
+  scale: 0.5,              
+  origin: 'right',
+  distance: '100px',
+  duration: 1500,
+  delay: 0,
+});
