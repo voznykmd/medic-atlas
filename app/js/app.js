@@ -1,3 +1,13 @@
+// HEADROOM.JS
+var headroomEl = document.querySelector("header");
+var options = {
+  offset : 0,
+  tolerance: { up: 5, down: 10 }
+};
+var headroom  = new Headroom(headroomEl, options);
+headroom.init();
+
+//PARALLAX
 const p0 = new Parallax('.parallax_scene0',{
   offsetYBounds: 50,
   intensity: 20,
@@ -19,6 +29,7 @@ const p2 = new Parallax('.parallax_scene2',{
   safeHeight: 0.15
 }).init();
 
+//VANILLA-MODAL
 const vanillaModal = new VanillaModal.default({
   modal: '.modal',
   modalInner: '.modal-inner',
