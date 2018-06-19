@@ -1,11 +1,12 @@
 .modal{	  
-  display: none; 
+  display: none;
 }
 .vanilla-modal{
   .modal{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
     position: fixed;
     top: 0;
     left: 0;
@@ -31,6 +32,7 @@
   position: relative;
   width: 100%; 
   max-width: 1200px;
+  max-height: 100vh;
   @include breakpoint(medium){
     width: 80%;
   }   
