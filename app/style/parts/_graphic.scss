@@ -4,12 +4,15 @@
 .graphic{	
 	padding: 100px 40px;
 	.graphic-title{
-		font-size: 48px;
-	    color: $black;
-	    text-align: center;
-	    margin-bottom: 100px;
-	    text-transform: capitalize;	
-	    overflow: hidden;    
+		font-size: 40px;
+		@include breakpoint(medium){
+			font-size: 48px;
+		}
+    color: $black;
+    text-align: center;
+    margin-bottom: 100px;
+    text-transform: capitalize;	
+    overflow: hidden;    
 	}
 	.title-text{
 		position: relative;

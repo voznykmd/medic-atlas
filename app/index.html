@@ -5,7 +5,12 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title></title>			
+		<title></title>
+
+		<link rel="icon" type="image/png" href="./img/favicon.png">		
+		<!-- <link rel="mask-icon" href="./img/icon.svg" color="blue"> -->
+		<link rel="icon" type="image/svg+xml" href="./img/favicon.svg">	
+
 		<link rel="stylesheet" type="text/css" href="./style.css"/>		
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	</head>
@@ -15,7 +20,10 @@
 			<div class="container">
 				<div class="header">
 					<div class="logo-container">
-						<img class="logo" src="./img/logo.svg" alt="logo">	
+						<div class="logo-image-container">
+							<img class="logo" src="./img/logo.svg" alt="logo">	
+						</div>
+						<span class="logo-text">HMP Analytical Tool</span>
 					</div>
 
 					<nav class="nav">
@@ -63,6 +71,30 @@
 
 		<main role="main" class="main">
 
+			<section class="about-wrapper">
+				<div class="container">
+					<div class="about">
+						<h2 class="about-title">Іntroduction</h2>						
+						<img class="about-img" src="./img/pic3.png" alt="photo">												
+						<p class="about-text">The old Soviet healthcare system is a comprehensive system based mainly on three types
+							of hospitals: local, district and republican. Meanwhile, the local and district hospitals were
+							general hospitals with four or five basic departments and some additional specialities; the
+							republican hospitals were mostly mono-profile institutes specialised on certain illnesses.
+							The efficiency of this system is in great need of improvement. The basic concept of hospital care was the idea of ensuring a bed for every patient, indifferent of hospital services.
+							Therefore huge hospitals have been created countrywide with a large bed capacity. The
+							medical services and the related costs didn’t play a prime role. Costs have been covered
+							by the state budget, such as subvention. Because of a lack of competition, the healthcare
+							systems in the former communist countries have lost the affiliation to the development
+							registered in the West-European countries.
+							The modern Western systems are well-structured population- and services-based systems.
+							The efficiency of the services is gaining more and more in importance so that hospitals
+							are forced to supply high-quality services for a payable price.
+							It is obvious, both from a medical point of view as from an economical, that the present
+							the situation needs to be changed.</p>		
+					</div>						
+				</div>							
+			</section>		
+
 			<!--
 				inline style for image proportions
 				100%   - 1:1 = square
@@ -73,7 +105,7 @@
 
 				if element hasn't any inline-style then image proportion 1:1 100%
 			-->
-			<section class="graphic-wrapper" id="section3">
+			<section class="graphic-wrapper">
 				<div class="container">
 					<div class="graphic">
 						<h3 class="graphic-title"><span class="title-text">Analytical tools for HMP</span></h3>
@@ -172,7 +204,7 @@
 			
 			
 
-			<section class="services-wrapper" id="section2">				
+			<section class="services-wrapper">				
 				<img class="parallax_scene1" src="./img/1.jpg" alt="photo">				
 				</div>
 				<div class="container">
@@ -208,7 +240,7 @@
 				</div>
 			</section>				
 
-			<section class="services-wrapper" id="section0">				
+			<section class="services-wrapper">				
 				<img class="parallax_scene0" src="./img/2.jpg" alt="photo">				
 				</div>
 				<div class="container">
@@ -226,35 +258,9 @@
 						
 					</div>
 				</div>
-			</section>
-
-			<section class="about-wrapper" id="section1">
-				<div class="container">
-					<div class="about">
-						<h2 class="about-title">Іntroduction</h2>
-						<div class="img-container">
-							<img class="about-img" src="./img/pic3.png" alt="photo">
-						</div>						
-						<p class="about-text">The old Soviet healthcare system is a comprehensive system based mainly on three types
-							of hospitals: local, district and republican. Meanwhile, the local and district hospitals were
-							general hospitals with four or five basic departments and some additional specialities; the
-							republican hospitals were mostly mono-profile institutes specialised on certain illnesses.
-							The efficiency of this system is in great need of improvement. The basic concept of hospital care was the idea of ensuring a bed for every patient, indifferent of hospital services.
-							Therefore huge hospitals have been created countrywide with a large bed capacity. The
-							medical services and the related costs didn’t play a prime role. Costs have been covered
-							by the state budget, such as subvention. Because of a lack of competition, the healthcare
-							systems in the former communist countries have lost the affiliation to the development
-							registered in the West-European countries.
-							The modern Western systems are well-structured population- and services-based systems.
-							The efficiency of the services is gaining more and more in importance so that hospitals
-							are forced to supply high-quality services for a payable price.
-							It is obvious, both from a medical point of view as from an economical, that the present
-							the situation needs to be changed.</p>		
-					</div>						
-				</div>							
-			</section>
+			</section>			
 			
-			<section class="check-wrapper" id="section4">
+			<section class="check-wrapper">
 				<div class="container">
 					<div class="check">					
 						<h2 class="check-title">The Hospital Master Plan</h2>
@@ -273,9 +279,8 @@
 				</div>			
 			</section>	
 
-			<section class="services-wrapper" id="section5">				
-				<img class="parallax_scene2" src="./img/3.jpeg" alt="photo">				
-				</div>
+			<section class="services-wrapper">				
+				<img class="parallax_scene2" src="./img/3.jpeg" alt="photo">	
 				<div class="container">
 					<div class="services">
 						<h2 class="services-title">HMP</h2>

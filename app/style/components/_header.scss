@@ -35,9 +35,19 @@
 		flex-wrap: nowrap;
 		justify-content: space-between;	
 	}	
-	.logo-container{		
-		width: 200px;
-		height: 60px;   
+	.logo-container{
+		display: flex;
+    align-items: center;		   
+	}
+	.logo-image-container{
+		width: 60px;
+		height: 60px;
+	}
+	.logo-text{
+		font-size: 22px;
+		font-weight: 700;
+    white-space: nowrap;
+		color: $background-blue;
 	}
 	.logo{
 		width: 100%;		

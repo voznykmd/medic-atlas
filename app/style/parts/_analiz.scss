@@ -5,7 +5,10 @@
 	overflow: auto;
   padding: 80px 0 120px;  
   .analiz-title{
-    font-size: 48px;
+    font-size: 40px;
+    @include breakpoint(medium){
+      font-size: 48px;
+    }
     color: $black;
     text-align: center;
     margin-bottom: 50px;
