@@ -73,3 +73,44 @@ rev.reveal('.reveal-title',{
   duration: 1500,
   delay: 0,
 });
+
+
+// city-button event
+
+const cityButton = document.querySelectorAll(".city-button");
+const cityAtlas = document.querySelectorAll(".js-atlas");
+console.log(cityButton);
+console.log(cityAtlas);
+
+var cityAtlasOpen = document.querySelector(".js-atlas.open"),
+    cityButtonActive = document.querySelector(".city-button.active");
+
+//console.log(cityAtlasOpen);
+
+cityButton.forEach(function(button) {
+  button.addEventListener("click", changeCityAtlas);              
+});   
+
+function changeCityAtlas(e) {  
+  e.preventDefault();
+  //console.log(e.target.name);
+  //console.log(cityAtlasOpen.id);
+  if (e.target.name !== cityAtlasOpen.id){
+
+    cityButtonActive.classList.remove("active");
+    e.target.classList.add("active");
+    cityButtonActive = e.target;
+
+    //console.log(cityButtonActive);
+
+    cityAtlasOpen.classList.remove("open");
+
+    cityAtlas.forEach(function(city) {
+      if (city.id===e.target.name) {
+        city.classList.add("open");
+        cityAtlasOpen = city;        
+      }
+    });
+  }  
+}
+
