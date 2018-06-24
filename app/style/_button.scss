@@ -29,19 +29,24 @@
 }
 
 .city-button{
-  $button-city-color: #bbb;
+  $button-city-color: #666;
   display: inline-block;    
-  background-color: $button-city-color;
-  border-radius: 3px;
-  border: 1px solid $button-city-color;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 3px solid $button-city-color;
   font-size: 16px;
   font-weight: 700;
-  color: #000;
+  color: $button-city-color;  
   padding: 15px 20px;    
   margin: 0 5px 20px;
-  &:hover, &.active{
-      background-color: darken($button-city-color, 30%);
-      border: 1px solid darken($button-city-color, 30%);
+  &:hover{      
+    border: 3px solid #34b1c4;
+    color: #34b1c4;
+  }
+  &.active{
+    border: 3px solid #34b1c4;
+    color: #34b1c4;
+    text-decoration: underline;
   }
 }
 
