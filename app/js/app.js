@@ -75,36 +75,52 @@ rev.reveal('.reveal-title',{
 });
 
 
-// city-button event
+// city-button & cityAtlas
 
 const cityButton = document.querySelectorAll(".city-button");
 const cityAtlas = document.querySelectorAll(".js-atlas");
-console.log(cityButton);
-console.log(cityAtlas);
 
-var cityAtlasOpen = document.querySelector(".js-atlas.open"),
-    cityButtonActive = document.querySelector(".city-button.active");
+if(cityAtlas&&(cityAtlas.length>0)&&cityButton&&(cityButton.length>0)) {
+  var cityButtonActive = document.querySelector(".city-button.active"),
+      cityAtlasOpen = document.querySelector(".js-atlas.open");  
 
-//console.log(cityAtlasOpen);
+  if(!cityButtonActive && !cityAtlasOpen){
+    cityButtonActive = document.querySelectorAll(".city-button")[0];
+    cityButtonActive.classList.add("active");
+  }  
 
-cityButton.forEach(function(button) {
-  button.addEventListener("click", changeCityAtlas);              
-});   
+  if(cityButtonActive && !cityAtlasOpen){
+    cityAtlas.forEach(atlas => {
+      if( cityButtonActive.name === atlas.id){
+        cityAtlasOpen = atlas;        
+      }        
+    });   
+    cityAtlasOpen.classList.add("open");
+  }
+
+  if(!cityButtonActive && cityAtlasOpen){
+    cityButton.forEach(button => {      
+      if( cityAtlasOpen.id === button.name){
+        cityButtonActive = button;        
+      }
+    });   
+    cityButtonActive.classList.add("active");
+  }  
+
+  cityButton.forEach(button => {
+    button.addEventListener("click", changeCityAtlas);              
+  });
+}
 
 function changeCityAtlas(e) {  
-  e.preventDefault();
-  //console.log(e.target.name);
-  //console.log(cityAtlasOpen.id);
-  if (e.target.name !== cityAtlasOpen.id){
+  e.preventDefault();  
+  if ( e.target.name !== cityAtlasOpen.id ){
 
     cityButtonActive.classList.remove("active");
     e.target.classList.add("active");
-    cityButtonActive = e.target;
-
-    //console.log(cityButtonActive);
+    cityButtonActive = e.target;    
 
     cityAtlasOpen.classList.remove("open");
-
     cityAtlas.forEach(function(city) {
       if (city.id===e.target.name) {
         city.classList.add("open");
