@@ -9,7 +9,22 @@
 		color: $black;
 		margin-bottom: 40px;
 	}
-	.check-text{
+	.title-text{
+		position: relative;
+		display: inline-block;
+		padding-bottom: 10px;
+		&:after{
+    	content: '';
+    	position: absolute;
+    	bottom: 0;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	height: 5px;
+    	width: 120%;
+    	background-color: #34b1c4;
+    }
+	}
+	.text{
 		margin-bottom: 60px;
 	}
 }

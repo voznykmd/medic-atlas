@@ -4,7 +4,7 @@
 .about{
 	padding: 80px 40px 120px;
 	@include breakpoint(medium){
-		padding: 80px 20% 120px;
+		padding: 80px 15% 120px;
 	}
 	.about-title{
 		font-size: 40px;
@@ -23,10 +23,5 @@
 			margin: 15px;
 			float: left;
 		}	
-	}
-	.about-text{
-		font-size: 20px;
-		line-height: 1.5;
-		text-align: justify;
-	}
+	}	
 }

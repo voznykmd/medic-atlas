@@ -118,4 +118,31 @@
 	.list-item:hover > .nuv-sublist {
     	display: block; 
 	}
+
+	.lang-switch-container{
+		display: flex;
+
+	}
+	.lang-switch{
+		padding: 0 5px;
+		font-weight: 700;
+		cursor: pointer;
+		position: relative;
+		&.active{
+		    color: $active-color;
+		}
+		&:hover{
+			color: $active-color;
+		}		
+		&:not(:last-child):after{
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translate(50%,-50%);
+			width: 1px;
+			height: 100%;
+			background-color: #666;
+		}		
+	}
 }
