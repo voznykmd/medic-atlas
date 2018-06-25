@@ -43,8 +43,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 60px;
-  height: 60px; 
+  width: $close-modal-size;
+  height: $close-modal-size; 
   padding: 10px; 
   background-color: transparent;
 }
@@ -53,7 +53,24 @@
   height: 100%;
   background: url("./img/cancel.svg");
 }
-
+.modal-header{
+  height: $close-modal-size;
+  width: 100%;
+  padding: 0 $close-modal-size 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #666;
+}
+.modal-link{
+  color: #34b1c4;
+  font-size: 24px;
+  font-weight: 700;
+  &:hover{          
+    color: darken(#34b1c4, 10%);
+    text-decoration: underline;
+  }
+}
 .modal-content{ 
   overflow: auto;  
   background-color: #fff;

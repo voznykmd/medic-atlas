@@ -1,3 +1,42 @@
+//DOM-i18n
+var langButton = document.querySelectorAll('.js-lang'),
+    langActive = document.querySelector(".js-lang.active");    
+var i18n = domI18n({       
+  selector: '[data-translatable]',
+  separator: ' // ',
+  languages: ['en-US', 'ua', 'de', 'fr'],  
+  defaultLanguage: 'en'
+});
+if(!langActive){
+  langButton.forEach(button => {      
+    if( button.name === 'en-US'){
+      langActive = button;        
+    }
+  });    
+  langActive.classList.add("active");
+  i18n.changeLanguage('en-US');
+}  
+
+langButton.forEach(button => {
+  button.addEventListener("click", changeLang);              
+});
+
+
+
+function changeLang(e){
+  e.preventDefault();
+
+  if ( e.target.name !== langActive.name ){
+
+    langActive.classList.remove("active");
+    e.target.classList.add("active");
+    langActive = e.target;    
+    
+    i18n.changeLanguage(langActive.name);    
+  }
+}
+
+
 // HEADROOM.JS
 var headroomEl = document.querySelector("header");
 var options = {

@@ -6,6 +6,7 @@
 	@include breakpoint(medium){
 		padding: 80px 15% 120px;
 	}
+	overflow: auto;
 	.about-title{
 		font-size: 40px;
 		@include breakpoint(medium){
