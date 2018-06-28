@@ -98,17 +98,17 @@ rev.reveal('.reveal',{
   opacity: 0,  
   scale: 0.9,              
   origin: 'bottom',
-  distance: '50px',
-  duration: 1000,
-  delay: 100, 
+  distance: '20px',
+  duration: 1500,
+  delay: 0, 
 });
 
 rev.reveal('.reveal-title',{
   viewFactor: 0.3,
   opacity: 0,  
-  scale: 0.5,              
+  scale: 0,              
   origin: 'right',
-  distance: '100px',
+  distance: '20px',
   duration: 1500,
   delay: 0,
 });
