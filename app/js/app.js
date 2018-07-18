@@ -1,21 +1,23 @@
 //DOM-i18n
 var langButton = document.querySelectorAll('.js-lang'),
-    langActive = document.querySelector(".js-lang.active");    
+    langActive = document.querySelector(".js-lang.active"),  
+    deflang = 'en-US';  
 var i18n = domI18n({       
   selector: '[data-translatable]',
   separator: ' // ',
-  languages: ['en-US', 'ua', 'de', 'fr'],  
-  defaultLanguage: 'en'
+  languages: ['en-US', 'ua'],  
+  defaultLanguage: deflang
 });
 if(!langActive){
   langButton.forEach(button => {      
-    if( button.name === 'en-US'){
+    if( button.name === deflang){
       langActive = button;        
     }
   });    
-  langActive.classList.add("active");
-  i18n.changeLanguage('en-US');
-}  
+  langActive.classList.add("active");  
+}else{
+  i18n.changeLanguage(langActive.name);
+} 
 
 langButton.forEach(button => {
   button.addEventListener("click", changeLang);              
