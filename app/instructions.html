@@ -41,7 +41,7 @@
 							</li>
 
 							<li class="list-item">
-								<span class="item-link" data-translatable>Distances // Відстані</span>
+								<a class="item-link" data-translatable href="http://ua.dane-i-analizy.pl/" target="_blank">Distances // Відстані</a>
 							</li>
 
 							<li class="list-item">
@@ -72,7 +72,7 @@
 			<section class="instructions-text-wrapper">
 				<div class="container">
 					<div class="instructions-text">
-						<h3 class="title reveal-title"><span class="title-text" data-translatable>Lorem ipsum dolor sit amet.</span></h3>
+						<h3 class="title reveal-title"><span class="title-text" data-translatable>Instructions for using interactive reports // Інструкції з використання інтерактивних звітів </span></h3>
 						<p class="text reveal" data-translatable>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati delectus, saepe accusamus fugiat doloribus, excepturi modi quae molestiae odit laudantium nam! Amet maxime nulla, dolor recusandae libero nobis quod tempore, sint ducimus temporibus excepturi, iusto suscipit corporis possimus quo enim aspernatur similique commodi provident voluptatibus delectus nisi, perferendis iure maiores molestiae! In consequuntur nam, ipsum odit accusamus saepe, rerum itaque tenetur unde dolores esse quod quo fugit culpa maxime asperiores quibusdam quisquam? Placeat mollitia commodi nulla reprehenderit, modi exercitationem eaque quidem unde, aliquid, porro nostrum? Ratione deleniti officiis voluptates culpa vel blanditiis dolore eum libero esse enim! Non ad labore commodi dignissimos, facere dolores consectetur suscipit ipsum accusantium similique odio. Nihil soluta quod, a sit vel minus consequuntur odit est eligendi dolorum repellendus dolorem deserunt quas, commodi, cum quos! Impedit sequi facilis ad unde officia illo minima, asperiores, animi molestias, exercitationem nam provident libero iusto dicta maxime delectus incidunt? Animi sint, consequatur consequuntur. Delectus ipsam nam tenetur voluptate assumenda! Sint assumenda distinctio ad, similique hic maiores odio necessitatibus vel, nemo eos ut ratione. Magnam nostrum sunt nesciunt nulla quibusdam voluptates fuga, obcaecati veritatis perferendis repudiandae quos ducimus in tempore voluptate odit, adipisci ratione numquam recusandae, ad fugit architecto temporibus. Obcaecati.</p>					
 					</div>
@@ -83,7 +83,7 @@
 			<section class="instructions-map-wrapper">
 				<div class="container">
 					<div class="instructions-map">					
-						<h2 class="title reveal-title"><span class="title-text" data-translatable>Instructions // Інструкції</span></h2>
+						<h2 class="title reveal-title"><span class="title-text" data-translatable>Illustration // Ілюстрація</span></h2>
 						<div class="instr-scheme">
 							<div class="img-container">
 								<img class="img" src="img/lviv.png" alt="img">
@@ -129,9 +129,45 @@
 			<section class="instructions-text-wrapper">
 				<div class="container">
 					<div class="instructions-text">
-						<h3 class="title reveal-title"><span class="title-text" data-translatable>Lorem ipsum dolor sit amet.</span></h3>
+						<h3 class="title reveal-title"><span class="title-text" data-translatable>Using the instrument for measuring distances // Використання інструменту для визначення відстаней</span></h3>
 						<p class="text reveal" data-translatable>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati delectus, saepe accusamus fugiat doloribus, excepturi modi quae molestiae odit laudantium nam! Amet maxime nulla, dolor recusandae libero nobis quod tempore, sint ducimus temporibus excepturi, iusto suscipit corporis possimus quo enim aspernatur similique commodi provident voluptatibus delectus nisi, perferendis iure maiores molestiae! In consequuntur nam, ipsum odit accusamus saepe, rerum itaque tenetur unde dolores esse quod quo fugit culpa maxime asperiores quibusdam quisquam? Placeat mollitia commodi nulla reprehenderit, modi exercitationem eaque quidem unde, aliquid, porro nostrum? Ratione deleniti officiis voluptates culpa vel blanditiis dolore eum libero esse enim! Non ad labore commodi dignissimos, facere dolores consectetur suscipit ipsum accusantium similique odio. Nihil soluta quod, a sit vel minus consequuntur odit est eligendi dolorum repellendus dolorem deserunt quas, commodi, cum quos! Impedit sequi facilis ad unde officia illo minima, asperiores, animi molestias, exercitationem nam provident libero iusto dicta maxime delectus incidunt? Animi sint, consequatur consequuntur. Delectus ipsam nam tenetur voluptate assumenda! Sint assumenda distinctio ad, similique hic maiores odio necessitatibus vel, nemo eos ut ratione. Magnam nostrum sunt nesciunt nulla quibusdam voluptates fuga, obcaecati veritatis perferendis repudiandae quos ducimus in tempore voluptate odit, adipisci ratione numquam recusandae, ad fugit architecto temporibus. Obcaecati.</p>					
+							The activities are as follows:
+
+							The user can choose any of the three types of actions on the page (they are represented by means of checkboxes and input fields):
+							a) clicking on any place on the map, determines the coordinates around which he wants to search for medical units (he can also enter these coordinates manually in the appropriate fields),
+							b) by selecting a region from the drop-down menu, it can limit the set of results to only the selected region,
+							c) opting for additional filters (currently defined in the system as filter A, filter B and filter C), selects from the drop-down list further options (selection in the next alphabetical filter will appear after selecting the previous one).
+							
+							In addition, each of the above activities is additionally supplemented by a distance filter (from the point selected in A) or from each facility (if coordinates are not selected in A))) or time filter (if coordinates are selected, this filter affects the distance search based on the time of arrival from the selected point or if it has not been selected, from all found hospitals).
+							
+							Each of the three types of operation can be freely combined (eg choose a point on the map and choose to filter A and B, etc.). The results obtained will be the sum of the filters selected in the manner described above.
+							
+							If you select a point on the map - the result will be a point marked with a hand graphic with a stroke around (which depends on the selected time / distance filter) and all hospitals that are within its range that meet the other search conditions.
+							
+							If the point is not selected, the result is a set of hospitals meeting the remaining search conditions, marked on the map in the form of blue markers, around which there is a distance / travel time outline depending on the selected filter.
+							
+							After clicking on any facility marker, the user will always see the name of the facility. In addition, if you have used the C filter, the exact value of the option selected in the mentioned filter will also appear there.
+						 // 
+						 При роботі з ним можна здійснювати наступні дії:
+
+а) натиснути на будь-якому місці на карті, щоб визначити координати, навколо яких потрібно відобразити медичні заклади. Також можна вводити ці координати вручну в відповідних полях - широта та довгота;
+
+б) вибрти регіон з випадаючого меню, щоб обмежити набір результатів лише вибраним регіоном;
+
+c) вибрати додаткові фільтри (в даний час визначені у системі як фільтр A, фільтр B і фільтр C). 
+Це дає можлість обрати додаткові опції з випадаючого списку. 
+
+d) Крім того, на карті можна фільтрувати дані за відстанню або часом подорожі. Для цього потрібно обрати відповідні опції у додатковому полі, що знаходиться під вищеописаними фільтрами.
+
+Кожну з цих дій можна вільно комбінувати. В результаті ви отримаєте комплекс даних, що будуть обмежені вибраними фільтрами.
+
+Якщо ви виберете точку на карті то побачите вказівник - зображення руки та обведений радіус (коло), розмір якого залежить від вибраного фільтра часу / відстані та всі лікарні, що знаходяться в межах цього радіусу і відповідають іншим умовам пошуку, якщо вони задані.
+
+Якщо точку на карті не обрано, то результатом буде набір лікарень, що відповідають критеріям пошуку. Лікарні позначені на карті блакитними  маркерами.  Навколо кожної з лікарень відображаєтся відстань або час подорожі в залежності від обраного фільтра.
+
+Після натискання на будь-який маркер об'єкта, можна побачити назву об'єкта. Крім того, якщо ви використали фільтр C, то там буде відображатися точне значення параметра, вибраного у вказаному фільтрі.
+
+						</p>					
 					</div>
 				</div>	
 			</section>						
@@ -140,7 +176,7 @@
 			<section class="instructions-map-wrapper">
 				<div class="container">
 					<div class="instructions-map">					
-						<h2 class="title reveal-title"><span class="title-text" data-translatable>Instructions // Інструкції</span></h2>
+						<h2 class="title reveal-title"><span class="title-text" data-translatable>Illustration // Ілюстрація</span></h2>
 						<div class="instr-scheme">
 							<div class="img-container">
 								<img class="img" src="img/lviv.png" alt="img">
