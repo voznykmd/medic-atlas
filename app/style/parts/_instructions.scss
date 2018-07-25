@@ -17,6 +17,7 @@
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+    max-width: 80%;
     &:after{
       content: '';
       position: absolute;
@@ -52,6 +53,7 @@
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+    max-width: 80%;
     &:after{
       content: '';
       position: absolute;
@@ -88,6 +90,9 @@
     width: 50%;
     @include breakpoint(large){
       width: 70%;
+    }
+    &.w90{
+      width: 90%;
     }
   } 
   .img{
@@ -200,5 +205,118 @@
     bottom: 72%;
     right: 109%;
     text-align: right;  
+  }  
+  /////////////////////////////
+  .arrow13{
+    top: -20%;
+    left: -2%;
+  }
+  .text13{
+    bottom: 121%;
+    left: -3%; 
+    text-align: left;       
+  }
+  .arrow14{
+    top: -16%;
+    left: 12%;
+  }
+  .text14{
+    bottom: 117%;
+    left: 2%;    
+  }
+  .arrow15{
+    top: -20%;
+    left: 31%;
+  }
+  .text15{
+    bottom: 121%;
+    left: 22%;    
+  }
+  .arrow16{
+    top: -16%;
+    left: 47%;
+  }
+  .text16{
+    bottom: 117%;
+    left: 37%;     
+  }
+  .arrow17{
+    top: -20%;
+    left: 64%;
+  }
+  .text17{
+    bottom: 121%;
+    left: 54%;      
+  }
+  .arrow18{
+    top: -16%;
+    left: 80%;     
+  }
+  .text18{
+    bottom: 117%;
+    left: 70%;        
+  }  
+  /////////////////
+  
+  .arrow19{
+    top: 9%;
+    left: 28%;    
+  }
+  .text19{
+    top: 32%;
+    left: 33%;
+    text-align: left;
+    color: #f00;  
+  }  
+  .arrow20{
+    top: 9%;
+    left: 47%;    
+  }
+  .text20{
+    top: 32%;
+    left: 55%;
+    text-align: left;
+    color: #f00;  
+  }
+  .arrow21{
+    top: 9%;
+    left: 66%;    
+  }
+  .text21{
+    top: 32%;
+    left: 74%;
+    text-align: left;
+    color: #f00;  
+  }
+  /////////////////
+  .arrow22{
+    top: 44%;
+    left: 62%;    
+  }
+  .text22{
+    top: 61%;
+    left: 71%;
+    text-align: left; 
+    color: #f00;   
+  }
+  .arrow23{
+    top: 55%;
+    left: 50%;
+  }
+  .text23{
+    top: 72%;
+    left: 59%;
+    text-align: left; 
+    color: #f00;
+  }
+  .arrow24{
+    bottom: 13%;
+    left: 47%;    
+  }
+  .text24{
+    top: 87%;
+    left: 55%;
+    text-align: left;
+    color: #f00;  
   }  
 }
