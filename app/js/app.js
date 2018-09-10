@@ -170,3 +170,19 @@ function changeCityAtlas(e) {
     });
   }  
 }
+
+
+var fullViewButton = document.querySelector('#full-view'); 
+if (fullViewButton){
+  fullViewButton.addEventListener("click", fullViewAnaliz);    
+}
+
+
+function fullViewAnaliz(e) { 
+  e.preventDefault();  
+  var linkFullView = document.querySelector('.js-atlas.open iframe').src;
+  console.log(linkFullView);
+  if(linkFullView){
+    window.open(linkFullView); 
+  }  
+}

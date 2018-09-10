@@ -1,9 +1,10 @@
 .analiz-wrapper{
   background-color: #fff;
+  padding: 80px 0 120px;
 }
 .analiz{
 	overflow: auto;
-  padding: 80px 0 120px;  
+  padding: 0;  
   .analiz-title{
     font-size: 40px;
     @include breakpoint(medium){
@@ -21,7 +22,7 @@
   }
 }
 .city-button-container{
-  padding: 40px 40px 0;
+  padding: 0 40px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
